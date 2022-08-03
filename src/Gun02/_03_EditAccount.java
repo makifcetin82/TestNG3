@@ -9,11 +9,41 @@ package Gun02;
      */
 
 
+import Utils.GenelWebDriver;
+import Utils.Tools;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
+public class _03_EditAccount extends GenelWebDriver {
 
-public class _03_EditAccount {
+     @Test
+     void EditAccount()
+     {
+         editAccount("İsmet","demir");
+         Tools.Bekle(2);
+         editAccount("Ahmet","yılmaz");
 
+     }
 
+      void editAccount(String ad,String Soyad)
+      {
 
+           WebElement edit=driver.findElement(By.linkText("Edit Account"));
+           edit.click();
+
+           WebElement firstName= driver.findElement(By.id("input-firstname"));
+           firstName.clear();
+           firstName.sendKeys(ad);
+
+          WebElement lastname= driver.findElement(By.id("input-lastname"));
+          lastname.clear();
+          lastname.sendKeys(ad);
+
+           WebElement cntBtn= driver.findElement(By.cssSelector("input[value='Continue']"))
+;          cntBtn.click();
+           Tools.successMessageValidation();
+
+      }
 
 }
