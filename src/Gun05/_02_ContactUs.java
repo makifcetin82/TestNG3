@@ -32,6 +32,9 @@ public class _02_ContactUs extends GenelWebDriver {
         System.out.println(contactUslabel.getText());
 
         Assert.assertEquals("Contact Us",contactUslabel.getText(),"Karşılaştırma sonucu : ");
+
+       // driver.manage().window().maximize();
+
     }
 
 
