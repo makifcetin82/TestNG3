@@ -1,4 +1,4 @@
-package _MentörOzgurHoca;
+package SelectOrnek;
 
 import Utils.GenelWebDriver;
 import org.openqa.selenium.By;
