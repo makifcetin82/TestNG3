@@ -43,7 +43,7 @@ public class ParametreliWebDriver {
         }
 
 
-        //driver.manage().window().maximize(); // max
+        driver.manage().window().maximize(); // max
         driver.manage().deleteAllCookies();  //
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
